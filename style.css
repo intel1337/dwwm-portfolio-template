@@ -1,6 +1,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+.neon-text {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #7d6000, 0 0 10px #7d6000, 0 0 20px #7d6000, 0 0 40px #7d6000, 0 0 80px #7d6000;
+    }
+    100% {
+        text-shadow: 0 0 10px #F4BC00, 0 0 20px #F4BC00, 0 0 40px #F4BC00, 0 0 80px #F4BC00, 0 0 160px #F4BC00;
+    }
+}
+@keyframes glowObject {
+    0% {
+        box-shadow: 0 0 2.5px #00ff4c, 0 0 5px #00ff4c, 0 0 10px #00ff4c, 0 0 20px #00ff4c, 0 0 40px #00ff4c;
+    }
+    100% {
+        box-shadow: 0 0 5px #F4BC00, 0 0 10px #F4BC00, 0 0 20px #F4BC00, 0 0 40px #F4BC00, 0 0 80px #F4BC00;
+    }
+}
 
 a, a:visited, a:active, a:hover {
     color: inherit;
@@ -20,12 +43,12 @@ a, a:visited, a:active, a:hover {
  /* header */
 
 header {
+    
     /*
      FIRST LINE IS BORDERS
     */
-    border: red 1px solid;
-
-
+    margin-top: 1.5%;
+    border: #F4BC00 1px solid;
     color: #fff;
     padding: 0.85rem;
     display: flex;
@@ -33,17 +56,19 @@ header {
     font-family: 'Roboto', sans-serif;
     background-color: #1b1b1b;
     color: #fff;
+    border-radius: 30px;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.3);
 }
 .textNav {
     display: flex;
     justify-content: right;
     align-items: center;
     margin-left: auto; 
-    font-family: 'Roboto', sans-serif;
+    font-family:'Courier New', Courier, monospace;
     color: #fff;
 }
 .textNav nav {
-    color: #ff014f;
+    color: #F4BC00;
 }
 
 nav ul {
@@ -65,7 +90,14 @@ nav ul li {
     
 }
 nav ul li:hover {
-    color: red;
+    color: #ffffff;
+    transition: 0.3s;
+    text-shadow: rgb(28, 28, 28) 0px 0px 9px ;
+    transform: scale(1.3);
+    animation: glow 5s infinite alternate;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+    
+    
 }
 
 #tinylogo {
@@ -75,8 +107,13 @@ nav ul li:hover {
     border-radius: 50%;
     box-shadow: 0px 3.5px 5px black;
     color: #fff;
-    object-fit: cover;
-    background-size: cover;
+    object-fit: fill;   
+}
+#tinylogo:hover {
+    animation: rotating 5s linear infinite;
+    scale: 1.1;
+    transition: 0.5s;
+    animation: glowObject 1s infinite alternate;
 }
 #textLogo {
     margin-left: 1rem;
@@ -91,15 +128,21 @@ nav ul li:hover {
 #shopImg {
     margin-left: 1rem;
     width: 50px;
-    height: 50  px;
+    height: 50px;
     border-radius: 50%;
     box-shadow: 0px 3.5px 5px black;
+    object-fit: scale-down;
+    background-size: cover;
+}
+#shopImg:hover {
+    background-color: #685000;
+    transition: 1s;
 }
 
 #buyButton {
-        background-color: #1e1e1e; /* Green */
+        background-color: #343434; /* Green */
         border: none;
-        color: rgb(181, 0, 57);
+        color: #F4BC00;
         padding: 15px 32px;
         text-align: center;
         text-decoration: none;
@@ -110,8 +153,9 @@ nav ul li:hover {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', bold;
 }
 #buyButton:hover {
-    color: rgb(226, 37, 37);
-    background-color: #242424; /* Green */
+    color: rgb(255, 255, 255);
+    background-color: #ba8f00; /* Green */
+    transition: 0.5s;
 }
 
 
@@ -121,46 +165,54 @@ body {
     /*
      FIRST LINE IS BORDERS
     */
-    border: red 1px solid;
+    
     margin: 0;
+    background-color: #171717;
 }
 
 main {
+    overflow: hidden;
     padding: 5%;
     /*
      FIRST LINE IS BORDERS
     */
-    border: red 1px solid;
+    
     display: flex;
     align-items: center;
     background-color: #171717;
     color: white;
 }
+.Desc {
+    justify-content: left;
+   
+}
+.Desc p {
+    font-size: 24px;
+    font-family: Roboto;
+    color: rgb(209, 209, 209);
+    letter-spacing: 5px;
+}
+.Desc h1 {
+    font-size: 50px;
+    font-family: Roboto;
+    text-shadow: 0px 3.5px 5px black;
+}
+.Desc h2 {
+    font-size: 40px;
+    font-family: Roboto;
+    text-shadow: 0px 3.5px 5px black;
+}
 
-.profile {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    /*
-     FIRST LINE IS BORDERS
-    */
-    border: cyan 1px solid;
-    padding: 0;
-    margin: 0;
-}
-.presentation {
-    border: green 1px solid;;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+
+
+
 
 .main h3 {
     display: flex;
     justify-content: left;
     align-items: left;
     font-family: monospace;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     font-size: 1.5rem;
     font-size: 16px;
     color: #b0b0b0;
@@ -168,12 +220,26 @@ main {
 
 }
 
-.profile img {
-    padding-left: 30%;
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+#profilePic {
+    width: 32%;
+    height: 32%;
     object-fit: cover;
-    object-position: center;
-    border-radius: 20%;
-    width: 70%;
-    grid-column: 2;
+    object-position: right;
+    margin-left: 20%;
+    transition: transform 0.5s;
+    scale: 1.35;
 }
+
+
+
+
 

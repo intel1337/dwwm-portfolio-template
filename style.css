@@ -26,6 +26,14 @@
         box-shadow: 0 0 2px #F4BC00, 0 0 4px #F4BC00, 0 0 8px #F4BC00, 0 0 16px #F4BC00, 0 0 32px #F4BC00;
     }
 }
+@keyframes glowObject2 {
+    0% {
+        box-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 8px #ffffff, 0 0 16px #ffffff;
+    }
+    100% {
+        box-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 8px #ffffff, 0 0 16px #ffffff, 0 0 32px #ffffff;
+    }
+}
 @keyframes glowBorder {
     0% {
         box-shadow: 0 0 0.4px #F4BC00, 0 0 0.8px #F4BC00, 0 0 1.6px #F4BC00, 0 0 3.2px #F4BC00, 0 0 6.4px #F4BC00;
@@ -273,7 +281,7 @@ main {
     padding: 20px;
     box-shadow: 2px 2px 8px black;
     width: 20rem;
-    height: 10rem;
+    height: 12rem;
     margin-top: 1%;
     margin-left: 5%;
     border-radius: 10px;
@@ -289,6 +297,10 @@ main {
     }
     p {
         font-size: 14px;
+    }
+    img {
+        max-width: 50px;
+        max-height: 50px;
     }
     
 }
@@ -336,6 +348,51 @@ main {
     
 }
 
+.flex-container2 {
+    display: grid 2;
+    grid-template-columns: 20px 20px;
+    background-color: #171717;
+    padding: 20px;
+    box-shadow: 2px 2px 8px black;
+    width: 20rem;
+    height: 20rem;
+    margin-top: 1%;
+    margin-left: 5%;
+    border-radius: 10px;
+    animation: glowObject2 1s infinite alternate;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 2px 2px black;
+    margin-bottom: 25%;
+    h1 {
+        font-size: 25px;
+    }
+    p {
+        font-size: 14px;
+    }
+    img {
+        margin-top: 10%;
+        max-width: 100%;
+        width: 80%;
+        height: 50%;
+        object-fit: stretch;
+        background-size: stretch;
+        object-position: top;
+        border-radius: 10px;
+    }
+    
+}
+
+#whatido {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    color: white;
+    text-shadow: 0px 2px 2px black;
+    animation: glow 1s infinite alternate;
+
+}
 
 
 
